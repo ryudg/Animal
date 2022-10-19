@@ -46,6 +46,10 @@ header nav a {
 header nav a:hover,
 header nav a:active {
   border-bottom: 3px solid #fff;
+  transition: 0.5s;
+}
+header nav a.active {
+  border-bottom: 3px solid #fff;
 }
 main {
   padding: 20px 15px;
@@ -82,4 +86,12 @@ main ul.pet-list li.item p.name {
   position: absolute;
   bottom: 0;
   width: 100%;
+  max-height: auto;
+}
+.name span {
+  display: none;
+}
+main ul.pet-list li.item p:hover > span {
+  display: block;
+  transition: 1s;
 }
