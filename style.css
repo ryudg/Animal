@@ -1,0 +1,85 @@
+/* style var() | 변수 */
+:root {
+  --main-color: #1abc9c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: "Roboto", "맑은 고딕", sans-serif;
+}
+header {
+  background-color: #ccc;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header h1 {
+  background-color: var(--main-color);
+  color: #fff;
+  text-align: center;
+  padding: 11px;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+header nav {
+  display: flex;
+}
+
+header nav a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  flex: 1;
+  text-align: center;
+  background-color: var(--main-color);
+  border-bottom: 3px solid transparent;
+  padding-bottom: 7px;
+}
+header nav a:hover,
+header nav a:active {
+  border-bottom: 3px solid #fff;
+}
+main {
+  padding: 20px 15px;
+}
+main h2 {
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+main ul.pet-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+main ul.pet-list li.item {
+  /* 칼럼의 크기 (여백 / 칼럼 수) */
+  width: calc(50% - 15px / 2);
+  margin-right: 15px;
+  margin-bottom: 20px;
+  position: relative;
+}
+main ul.pet-list li.item:nth-child(2n) {
+  margin-right: 0;
+}
+main ul li img {
+  width: 100%;
+  display: block;
+}
+main ul.pet-list li.item p.name {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
